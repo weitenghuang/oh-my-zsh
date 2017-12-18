@@ -115,3 +115,22 @@ else
     fi
   fi
 fi
+
+# _local config starts_
+export PATH="$HOME/.bin:$PATH"
+
+export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+source $(brew --prefix nvm)/nvm.sh
+
+eval "$(rbenv init - --no-rehash)"
+
+export GOPATH="$HOME/Go"
+
+export PATH="$PATH:$GOPATH/bin"
+
+source $(brew --prefix dvm)/dvm.sh
+
+source $(brew --prefix)/etc/bash_completion.d/nvm
+# _local config ends_
